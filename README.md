@@ -19,3 +19,5 @@ It's important to give proper credit. Add links to any repo that inspired you or
 
 about me: 
 My name is ahmed aldarorah and I'm a mechanical engineer graduate
+
+My goals : I am eager to learn Data sceince 
