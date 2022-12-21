@@ -2,6 +2,9 @@ import time
 import pandas as pd
 import numpy as np
 
+def GPA():
+    print("2.8 out of 4")
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -24,7 +27,7 @@ def get_filters():
         else:
             print("invalid input. Please enter a valid input")
     #TO DO get user input for month (all, january, february, ... , june)
-    while True:    
+    while True:
         month = input("which month are you looking for january, february, march, may, june, or 'all'")
         month = month.lower()
         if month in ['january', 'february', 'march', 'april', 'may', 'june', 'all']:
@@ -55,7 +58,7 @@ def load_data(city, month, day):
     """
      #TO DO load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
-    
+
     #TO DO  convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -69,14 +72,14 @@ def load_data(city, month, day):
         #TO DO use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-    
+
         #TO DO filter by month to create the new dataframe
         df = df[df['month'] == month]
 
     #TO DO filter by day of week if applicable
     if day != 'all':
         #TO DO filter by day of week to create the new dataframe
-        
+
         df = df[df['day_of_week'] == day.title()]
 
     return df
