@@ -5,6 +5,10 @@ import numpy as np
 def GPA():
     print("2.8 out of 4")
 
+    def printInfo():
+        print("Ahmed Aldarorah")
+        print("Mechanical Engineer")
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
